@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      database: codercred_development
+      hosts:
+        - localhost:27017

@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Codercred Dependencies
 gem 'bootstrap-sass'
+gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-github'
 
 # Environment Dependencies
 group :development do
@@ -21,6 +24,7 @@ end
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end

@@ -8,6 +8,11 @@
 </head>
 <body>
   <div class="container">
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-success alert-dismissible", role: "alert") %>
+    <% end %>
+
+    <%= link_to "Sign in with Github", "/auth/github" %>
     <%= yield %>
   </div>
 </body>

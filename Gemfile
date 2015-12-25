@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'trix'
 
 # Environment Dependencies
 group :development do

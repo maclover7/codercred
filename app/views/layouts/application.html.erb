@@ -14,6 +14,8 @@
       <%= content_tag(:div, msg, class: "alert alert-success alert-dismissible", role: "alert") %>
     <% end %>
 
+    <%= render "modals/achievement_new" %>
+
     <%= yield %>
   </div>
 </body>

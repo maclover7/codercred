@@ -1,0 +1,30 @@
+<div class="modal fade" id="newAchievement" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Achievement</h4>
+      </div>
+      <div class="modal-body">
+
+        <%= form_tag achievements_path, id: "new-achievement-form" do %>
+          <div class="form-group">
+           <%= label_tag "title" %>
+            <%= text_field_tag "achievement[title]", nil, placeholder: "abc123", class: "form-control new-achievement-title" %>
+          </div>
+          <div class="form-group">
+            <%= label_tag "description" %>
+            <input class="form-control new-achievement-description" id="achievement[description]" value="" placeholder="" type="hidden" name="achievement[description]">
+            <trix-editor class="trix-content" input="achievement[description]"></trix-editor>
+          </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= button_tag "Submit", type:"submit", class: "btn btn-primary new-achievement-btn popup-submit" %>
+      </div>
+        <% end %>
+
+    </div>
+  </div>
+</div>

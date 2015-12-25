@@ -18,6 +18,11 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <% if user_signed_in? %>
+          <li>
+            <a id="new-achievement-toggler" data-toggle="modal" data-target="#newAchievement">
+              <span class="glyphicon glyphicon-plus"></span> New Achievement
+            </a>
+          </li>
           <li><%= link_to "Log out", logout_path %></li>
         <% else %>
           <li><%= link_to "Sign in with Github", "/auth/github" %></li>

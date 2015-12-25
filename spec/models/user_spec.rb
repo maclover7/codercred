@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  it { should have_many(:achievements) }
+  
   describe '#create_from_auth_hash' do
     before do
       OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({

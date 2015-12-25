@@ -17,6 +17,10 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'trix'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-sweetalert'
+end
+
 # Environment Dependencies
 group :development do
   gem 'web-console', '~> 2.0'

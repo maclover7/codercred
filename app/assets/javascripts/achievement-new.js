@@ -4,12 +4,10 @@ achievementCreateListener = function() {
     e.preventDefault();
 
     if (!$('.new-achievement-title').val()) {
-      alert("Title field can't be blank");
-      // swal({ title: "Name field can't be blank", type: "warning" });
+      swal({ title: "Title field can't be blank", type: "warning" });
     } else {
       if (!$('.new-achievement-description').val()) {
-        alert("Description field can't be blank");
-        // swal({ title: "Description field can't be blank", type: "warning" });
+        swal({ title: "Description field can't be blank", type: "warning" });
       } else {
         $('.new-achievement-btn').prop('disabled', true);
         sendAchievement();
@@ -33,13 +31,11 @@ function sendAchievement() {
       hideButton();
       clearInput();
       $('.new-achievement-btn').prop('disabled', false);
-      alert("Achievement added successfully.");
-      // swal("Achievement added successfully.", "", "success");
+      swal("Achievement added successfully.", "", "success");
       window.location.reload();
     },
     error: function() {
-      alert("Error, please try again.");
-      // swal("Error, please try again.", "It is possible that you may already be registered for this course.", "error");
+      swal("Error, please try again.", "", "error");
       $('.new-achievement-btn').prop('disabled', false);
     }
   })

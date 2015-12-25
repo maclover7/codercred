@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require trix
+//= require sweetalert
 //= require_tree .

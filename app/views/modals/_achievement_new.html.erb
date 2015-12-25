@@ -9,13 +9,20 @@
 
         <%= form_tag achievements_path, id: "new-achievement-form" do %>
           <div class="form-group">
-           <%= label_tag "title" %>
+            <%= label_tag "title" %>
             <%= text_field_tag "achievement[title]", nil, placeholder: "abc123", class: "form-control new-achievement-title" %>
           </div>
+
           <div class="form-group">
             <%= label_tag "description" %>
             <input class="form-control new-achievement-description" id="achievement[description]" value="" placeholder="" type="hidden" name="achievement[description]">
             <trix-editor class="trix-content" input="achievement[description]"></trix-editor>
+          </div>
+
+          <div class="form-group">
+            <%= label_tag "category" %><br>
+              <input type="radio" value="community" name="achievement[category]"> Community (Conference talks, meetups organized, mentoring / pairing sessions etc.)</input><br>
+              <input type="radio" value="content" name="achievement[category]"> Content (Blog posts, side projects, etc.)</input>
           </div>
       </div>
 

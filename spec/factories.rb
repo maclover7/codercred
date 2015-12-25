@@ -1,7 +1,8 @@
 FactoryGirl.define do
   factory :achievement do
-    title { Faker::Lorem.word }
+    category "content"
     description { Faker::Lorem.paragraph }
+    title { Faker::Lorem.word }
     user_id 1
   end
 

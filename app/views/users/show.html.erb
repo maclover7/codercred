@@ -1,10 +1,13 @@
-<% if current_user && current_user.id == @user.id %>
-  <button type="button" class="btn btn-primary btn-lg" id="new-achievement-toggler" data-toggle="modal" data-target="#newAchievement">
-    <span class="glyphicon glyphicon-plus"></span> New Achievement
-  </button>
-<% end %>
-
-<h1 class="center"><%= @user.name %></h1>
+<div class="center">
+  <h1>
+    <%= @user.name %>
+    <% if current_user && current_user.id == @user.id %>
+      <button type="button" class="btn btn-primary btn-lg" id="new-achievement-toggler" data-toggle="modal" data-target="#newAchievement">
+        <span class="glyphicon glyphicon-plus"></span> New Achievement
+      </button>
+    <% end %>
+  </h1>
+</div>
 
 <div class="row">
   <div class="col-md-6">

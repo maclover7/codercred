@@ -23,6 +23,11 @@
               <span class="glyphicon glyphicon-plus"></span> New Achievement
             </a>
           </li>
+          <li>
+            <%= link_to user_path(current_user) do %>
+              <span class="glyphicon glyphicon-user"></span> My Profile
+            <% end %>
+          </li>
           <li><%= link_to "Log out", logout_path %></li>
         <% else %>
           <li><%= link_to "Sign in with Github", "/auth/github" %></li>

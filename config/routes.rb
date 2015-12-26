@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback' => 'sessions#create'
   get '/logout' => 'sessions#destroy', as: :logout
 
-  get '/:username' => 'users#show'
+  get '/:username' => 'users#show', as: :user
   resources :achievements
 
   # The priority is based upon order of creation: first created -> highest priority.

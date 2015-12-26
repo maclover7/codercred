@@ -7,6 +7,12 @@
       </div>
       <div class="modal-body">
         <%= sanitize(achievement.description) %>
+
+        <% if achievement.community? %>
+          <label class="label label-info">Community</label>
+        <% elsif achievement.content? %>
+          <label class="label label-success">Content</label>
+        <% end %>
       </div>
 
       <div class="modal-footer">

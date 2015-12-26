@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'puma'
 gem 'trix'
 
 source 'https://rails-assets.org' do

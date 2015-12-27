@@ -4,6 +4,7 @@ class AchievementsController < ApplicationController
   def create
     @achievement = current_user.achievements.create(achievements_params)
     if @achievement.save
+      @achievement.add_points_to_user
       render json: {}, status: 201
     end
   end

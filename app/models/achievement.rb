@@ -4,6 +4,15 @@ class Achievement < ActiveRecord::Base
 
   belongs_to :user
 
+  def add_points_to_user
+    if community?
+      user.points += 2
+    else
+      user.points += 1
+    end
+    user.save
+  end
+
   def community?
     category == "community"
   end

@@ -9,6 +9,7 @@ FactoryGirl.define do
   factory :user do
     email { Faker::Internet.email }
     name { Faker::Name.first_name }
+    points 0
     username { Faker::Internet.email }
   end
 end

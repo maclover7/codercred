@@ -19,6 +19,13 @@ RSpec.describe AchievementsController, type: :controller do
           post :create, achievement: FactoryGirl.attributes_for(:achievement)
         }.to change(Achievement, :count).by(1)
       end
+
+      it "increments points" do
+        expect {
+          post :create, achievement: FactoryGirl.attributes_for(:achievement)
+          @user.reload
+        }.to change(@user, :points)
+      end
     end
 
     context "no logged in user" do

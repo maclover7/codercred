@@ -3,28 +3,26 @@ require 'rails_helper'
 RSpec.describe Achievement, type: :model do
   it { should belong_to(:user) }
 
-  describe "helper methods" do
-    describe "#add_points_to_user" do
-      context "community" do
-        it "adds correct number of points" do
-          @user = FactoryGirl.create(:user)
-          @achievement = FactoryGirl.create(:achievement, category: "community")
-          expect {
-            @achievement.add_points_to_user
-            @user.reload
-          }.to change(@user, :points).by(2)
-        end
+  describe "#add_points_to_user" do
+    context "community" do
+      it "adds correct number of points" do
+        @user = FactoryGirl.create(:user)
+        @achievement = FactoryGirl.create(:achievement, category: "community")
+        expect {
+          @achievement.add_points_to_user
+          @user.reload
+        }.to change(@user, :points).by(2)
       end
+    end
 
-      context "content" do
-        it "adds correct number of points" do
-          @user = FactoryGirl.create(:user)
-          @achievement = FactoryGirl.create(:achievement, category: "content")
-          expect {
-            @achievement.add_points_to_user
-            @user.reload
-          }.to change(@user, :points).by(1)
-        end
+    context "content" do
+      it "adds correct number of points" do
+        @user = FactoryGirl.create(:user)
+        @achievement = FactoryGirl.create(:achievement, category: "content")
+        expect {
+          @achievement.add_points_to_user
+          @user.reload
+        }.to change(@user, :points).by(1)
       end
     end
 

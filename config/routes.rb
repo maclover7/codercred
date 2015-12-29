@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy', as: :logout
 
   get '/:username' => 'users#show', as: :user
+  get '/:username/edit' => 'users#edit', as: :edit_user
+  patch '/:username' => 'users#update', as: :update_user
   resources :achievements
 
   # The priority is based upon order of creation: first created -> highest priority.

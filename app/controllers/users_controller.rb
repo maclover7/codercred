@@ -30,10 +30,10 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find_by!(username: params[:username])
+    @user = User.find_by!(github_username: params[:github_username])
   end
 
   def user_params
-    {}
+    params.require(:user).permit(:description, :github_username, :facebook_username, :twitter_username)
   end
 end

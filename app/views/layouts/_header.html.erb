@@ -27,12 +27,12 @@
                 </a>
               </li>
               <li>
-                <%= link_to user_path(current_user) do %>
+                <%= link_to user_path(current_user.github_username) do %>
                   <span class="glyphicon glyphicon-user"></span> My Profile
                 <% end %>
               </li>
               <li>
-                <%= link_to edit_user_path(current_user.username) do %>
+                <%= link_to edit_user_path(current_user.github_username) do %>
                   <span class="glyphicon glyphicon-cog"></span> Edit Profile
                 <% end %>
               </li>

@@ -8,8 +8,14 @@ FactoryGirl.define do
 
   factory :user do
     email { Faker::Internet.email }
+    github_username { Faker::Internet.email }
     name { Faker::Name.first_name }
     points 0
-    username { Faker::Internet.email }
+  end
+
+  factory :update_user do
+    description { Faker::Lorem.sentence }
+    facebook_username "hello"
+    twitter_username "hello"
   end
 end

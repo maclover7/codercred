@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229033928) do
+ActiveRecord::Schema.define(version: 20151229141436) do
 
   create_table "achievements", force: :cascade do |t|
     t.string   "title"
@@ -26,9 +26,12 @@ ActiveRecord::Schema.define(version: 20151229033928) do
     t.string   "email"
     t.string   "name"
     t.string   "username"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "points",     default: 0
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "points",           default: 0
+    t.text     "description"
+    t.string   "github_username"
+    t.string   "twitter_username"
   end
 
 end

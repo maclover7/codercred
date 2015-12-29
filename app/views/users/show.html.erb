@@ -7,7 +7,21 @@
       </button>
     <% end %>
     <br>
+
     <small><%= @user.points %> Codercred Points</small>
+
+    <br>
+    <% if !@user.facebook_username.nil? %>
+      <%= link_to "https://facebook.com/#{@user.twitter_username}" do %>
+        <i class="fa fa-facebook"></i>
+      <% end %>
+    <% end %>
+
+    <% if !@user.twitter_username.nil? %>
+      <%= link_to "https://twitter.com/#{@user.twitter_username}" do %>
+        <i class="fa fa-twitter"></i>
+      <% end %>
+    <% end %>
   </h1>
 </div>
 

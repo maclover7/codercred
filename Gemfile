@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Codercred Dependencies
 gem 'bootstrap-sass'
 gem 'figaro'
+gem 'font-awesome-sass'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'puma'
